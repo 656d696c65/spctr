@@ -10,7 +10,8 @@ import banner_20220610 from "../../assets/banners/20220610.png"
 import banner_20230701 from "../../assets/banners/20230701.png"
 import banner_20230909 from "../../assets/banners/20230909.png"
 import banner_20240608 from "../../assets/banners/20240608.jpg"
-import banner_20240621 from "../../assets/banners/20240621.jpg"
+import banner_20240622 from "../../assets/banners/20240622.webp"
+import banner_20240706 from "../../assets/banners/20240706.webp"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/accordion"
 import Page from "../../components/page"
 
@@ -30,6 +31,70 @@ type Event = {
 }
 
 const pastEvents: Event[] = [
+    {
+        id: "fete_de_la_musique_",
+        date: "22 06 2024",
+        name: "Fête de la musique",
+        banner: banner_20240622,
+        lineUp: [
+            {
+                timeStartHour: "23",
+                timeStartMin: "00",
+                timeEndHour: "00",
+                timeEndMin: "00",
+                name: ["K-Plan"]
+            },
+            {
+                timeStartHour: "00",
+                timeStartMin: "00",
+                timeEndHour: "01",
+                timeEndMin: "00",
+                name: ["LO:ST"]
+            },
+            {
+                timeStartHour: "01",
+                timeStartMin: "00",
+                timeEndHour: "02",
+                timeEndMin: "00",
+                name: ["DSL"]
+            },
+            {
+                timeStartHour: "02",
+                timeStartMin: "00",
+                timeEndHour: "03",
+                timeEndMin: "00",
+                name: ["AXLR"]
+            },
+            {
+                timeStartHour: "03",
+                timeStartMin: "00",
+                timeEndHour: "04",
+                timeEndMin: "00",
+                name: ["Andromaque"]
+            },
+            {
+                timeStartHour: "04",
+                timeStartMin: "00",
+                timeEndHour: "05",
+                timeEndMin: "00",
+                name: ["Osmium"]
+            },
+            {
+                timeStartHour: "05",
+                timeStartMin: "00",
+                timeEndHour: "06",
+                timeEndMin: "00",
+                name: ["BN"]
+            },
+            {
+                timeStartHour: "06",
+                timeStartMin: "00",
+                timeEndHour: "07",
+                timeEndMin: "00",
+                name: ["DJerem"]
+            }
+        ]
+    },
     {
         id: "back_to_betise_08062024",
         date: "08 06 2024",
@@ -569,11 +634,61 @@ const pastEvents: Event[] = [
 ]
 
 const nextEvent: Event | undefined = {
-    id: "fete_de_la_musique_20240621",
-    date: "21 06 2024",
-    name: "Fête de la musique",
-    banner: banner_20240621,
-    lineUp: []
+    id: "rave_generale_20240706",
+    date: "06 07 2024",
+    name: "Rave generale",
+    banner: banner_20240706,
+    lineUp: [
+        {
+            timeStartHour: "23",
+            timeStartMin: "00",
+            timeEndHour: "00",
+            timeEndMin: "00",
+            name: ["Osmium"]
+        },
+        {
+            timeStartHour: "00",
+            timeStartMin: "00",
+            timeEndHour: "01",
+            timeEndMin: "30",
+            name: ["DSL"]
+        },
+        {
+            timeStartHour: "01",
+            timeStartMin: "30",
+            timeEndHour: "02",
+            timeEndMin: "30",
+            name: ["R4"]
+        },
+        {
+            timeStartHour: "02",
+            timeStartMin: "30",
+            timeEndHour: "04",
+            timeEndMin: "00",
+            name: ["One Step Further"]
+        },
+        {
+            timeStartHour: "04",
+            timeStartMin: "00",
+            timeEndHour: "05",
+            timeEndMin: "00",
+            name: ["Nomaid"]
+        },
+        {
+            timeStartHour: "05",
+            timeStartMin: "00",
+            timeEndHour: "06",
+            timeEndMin: "00",
+            name: ["Redz"]
+        },
+        {
+            timeStartHour: "06",
+            timeStartMin: "00",
+            timeEndHour: "07",
+            timeEndMin: "00",
+            name: ["Tox."]
+        }
+    ]
 }
 
 export default function EventsPage() {
@@ -595,7 +710,7 @@ export default function EventsPage() {
                                     <div className="w-full flex flex-col md:flex-row justify-between items-start gap-4">
                                         <img
                                             src={nextEvent.banner}
-                                            alt="09092023"
+                                            alt={nextEvent.id}
                                             className="w-full max-w-[256px]"
                                             loading="lazy"
                                         />
@@ -639,7 +754,7 @@ export default function EventsPage() {
                                             <div className="flex flex-col justify-start items-end gap-2">
                                                 {/* <Link to="/inscription" className="p-2 text-white border border-solid border-neutral-50 hover:underline whitespace-nowrap">Inscription</Link> */}
                                                 <a
-                                                    href="https://donate.stripe.com/eVa01y5j90nz0nK9AE"
+                                                    href="https://donate.stripe.com/bIY29G5j93zL6M85km"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="p-2 text-white border border-solid border-neutral-50 hover:underline whitespace-nowrap"
@@ -672,7 +787,7 @@ export default function EventsPage() {
                                                 <img
                                                     src={event.banner}
                                                     alt={event.id}
-                                                    className="w-full md:w-3/5 aspect-video"
+                                                    className="w-full max-w-[256px]"
                                                     loading="lazy"
                                                 />
                                                 <div className="min-w-min flex flex-row justify-start items-start md:items-center">
