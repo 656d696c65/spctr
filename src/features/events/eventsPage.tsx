@@ -644,7 +644,7 @@ const nextEvent: Event | undefined = {
             timeStartMin: "00",
             timeEndHour: "00",
             timeEndMin: "00",
-            name: ["Osmium"]
+            name: ["Parsec"]
         },
         {
             timeStartHour: "00",
