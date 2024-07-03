@@ -636,7 +636,7 @@ const pastEvents: Event[] = [
 const nextEvent: Event | undefined = {
     id: "rave_generale_20240706",
     date: "06 07 2024",
-    name: "Rave generale",
+    name: "Rave générale",
     banner: banner_20240706,
     lineUp: [
         {
