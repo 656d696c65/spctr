@@ -16,7 +16,7 @@ export default function HomePage() {
                     }}
                 >
                     <div className="absolute top-0 right-0 animate-blink">
-                        <span className="text-md text-white text-right">21 06 2024</span>
+                        <span className="text-md text-white text-right">06 07 2024</span>
                     </div>
                     <div
                         className="h-fit absolute inset-0"
