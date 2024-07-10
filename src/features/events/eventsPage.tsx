@@ -32,6 +32,63 @@ type Event = {
 
 const pastEvents: Event[] = [
     {
+        id: "rave_generale_20240706",
+        date: "06 07 2024",
+        name: "Rave générale",
+        banner: banner_20240706,
+        lineUp: [
+            {
+                timeStartHour: "23",
+                timeStartMin: "00",
+                timeEndHour: "00",
+                timeEndMin: "00",
+                name: ["Parsec"]
+            },
+            {
+                timeStartHour: "00",
+                timeStartMin: "00",
+                timeEndHour: "01",
+                timeEndMin: "30",
+                name: ["DSL"]
+            },
+            {
+                timeStartHour: "01",
+                timeStartMin: "30",
+                timeEndHour: "02",
+                timeEndMin: "30",
+                name: ["R4"]
+            },
+            {
+                timeStartHour: "02",
+                timeStartMin: "30",
+                timeEndHour: "04",
+                timeEndMin: "00",
+                name: ["One Step Further"]
+            },
+            {
+                timeStartHour: "04",
+                timeStartMin: "00",
+                timeEndHour: "05",
+                timeEndMin: "00",
+                name: ["Nomaid"]
+            },
+            {
+                timeStartHour: "05",
+                timeStartMin: "00",
+                timeEndHour: "06",
+                timeEndMin: "00",
+                name: ["Redz"]
+            },
+            {
+                timeStartHour: "06",
+                timeStartMin: "00",
+                timeEndHour: "07",
+                timeEndMin: "00",
+                name: ["Tox."]
+            }
+        ]
+    },
+    {
         id: "fete_de_la_musique_",
         date: "22 06 2024",
         name: "Fête de la musique",
@@ -633,63 +690,7 @@ const pastEvents: Event[] = [
     }
 ]
 
-const nextEvent: Event | undefined = {
-    id: "rave_generale_20240706",
-    date: "06 07 2024",
-    name: "Rave générale",
-    banner: banner_20240706,
-    lineUp: [
-        {
-            timeStartHour: "23",
-            timeStartMin: "00",
-            timeEndHour: "00",
-            timeEndMin: "00",
-            name: ["Parsec"]
-        },
-        {
-            timeStartHour: "00",
-            timeStartMin: "00",
-            timeEndHour: "01",
-            timeEndMin: "30",
-            name: ["DSL"]
-        },
-        {
-            timeStartHour: "01",
-            timeStartMin: "30",
-            timeEndHour: "02",
-            timeEndMin: "30",
-            name: ["R4"]
-        },
-        {
-            timeStartHour: "02",
-            timeStartMin: "30",
-            timeEndHour: "04",
-            timeEndMin: "00",
-            name: ["One Step Further"]
-        },
-        {
-            timeStartHour: "04",
-            timeStartMin: "00",
-            timeEndHour: "05",
-            timeEndMin: "00",
-            name: ["Nomaid"]
-        },
-        {
-            timeStartHour: "05",
-            timeStartMin: "00",
-            timeEndHour: "06",
-            timeEndMin: "00",
-            name: ["Redz"]
-        },
-        {
-            timeStartHour: "06",
-            timeStartMin: "00",
-            timeEndHour: "07",
-            timeEndMin: "00",
-            name: ["Tox."]
-        }
-    ]
-}
+const nextEvent: Event | undefined = undefined
 
 export default function EventsPage() {
     return (
