@@ -14,13 +14,14 @@ import banner_20240622 from "../../assets/banners/20240622.webp"
 import banner_20240706 from "../../assets/banners/20240706.webp"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/accordion"
 import Page from "../../components/page"
+import { Link } from "@tanstack/react-router"
 
 
 type Event = {
     id: string
     date: string
-    name: string
-    banner: string
+    name: string | undefined
+    banner: string | undefined
     lineUp: {
         timeStartHour: string
         timeEndHour: string
@@ -690,7 +691,13 @@ const pastEvents: Event[] = [
     }
 ]
 
-const nextEvent: Event | undefined = undefined
+const nextEvent: Event | undefined = {
+    id: "20241005",
+    date: "05 10 2024",
+    name: undefined,
+    banner: undefined,
+    lineUp: []
+}
 
 export default function EventsPage() {
     return (
@@ -753,7 +760,7 @@ export default function EventsPage() {
                                                 }
                                             </ol>
                                             <div className="flex flex-col justify-start items-end gap-2">
-                                                {/* <Link to="/inscription" className="p-2 text-white border border-solid border-neutral-50 hover:underline whitespace-nowrap">Inscription</Link> */}
+                                                <Link to="/inscription" className="p-2 text-white border border-solid border-neutral-50 hover:underline whitespace-nowrap">Inscription</Link>
                                                 <a
                                                     href="https://donate.stripe.com/bIY29G5j93zL6M85km"
                                                     target="_blank"
