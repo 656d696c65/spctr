@@ -16,15 +16,23 @@ export function ContactPage() {
                 </div>
                 <div className="h-full flex flex-col justify-start items-stretch gap-2 md:gap-4">
                     <h2 className="text-lg opacity-50 font-light uppercase">Contact</h2>
-                    <span>Vous pouvez nous contacter à l'adresse email suivante&nbsp;
-                        <a
-                            href="mailto:spectre.tchno@gmail.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <span className="text-white underline hover:no-underline">spectre.tchno@gmail.com</span>
-                        </a>
+                    <span>
+                        Vous pouvez nous contacter aux adresses email suivantes&nbsp;
                     </span>
+                    <a
+                        href="mailto:spectre.tchno@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span className="text-white underline hover:no-underline">spectre.tchno@gmail.com</span>
+                    </a>
+                    <a
+                        href="mailto:spectre.asso@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span className="text-white underline hover:no-underline">spectre.asso@gmail.com</span>
+                    </a>
                 </div>
                 <div className="h-full flex flex-col justify-start items-stretch gap-2 md:gap-4">
                     <h2 className="text-lg opacity-50 font-light uppercase">Réseaux sociaux</h2>

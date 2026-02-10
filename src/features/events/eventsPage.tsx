@@ -12,31 +12,254 @@ import banner_20230909 from "../../assets/banners/20230909.png"
 import banner_20240608 from "../../assets/banners/20240608.jpg"
 import banner_20240622 from "../../assets/banners/20240622.webp"
 import banner_20240706 from "../../assets/banners/20240706.webp"
+import banner_20250504 from "../../assets/banners/20250405.webp"
+import banner_20250703 from "../../assets/banners/20250703.webp"
+import banner_20251128_1 from "../../assets/banners/20251128_1.webp"
+import banner_20251128_2 from "../../assets/banners/20251128_2.webp"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/accordion"
 import Page from "../../components/page"
-import { Link } from "@tanstack/react-router"
 
 
 type Event = {
     id: string
     date: string
     name: string | undefined
-    banner: string | undefined
+    banner: Array<string | undefined>
     lineUp: {
-        timeStartHour: string
-        timeEndHour: string
-        timeStartMin: string
-        timeEndMin: string
+        timeStartHour?: string
+        timeEndHour?: string
+        timeStartMin?: string
+        timeEndMin?: string
         name: string[]
     }[]
 }
 
 const pastEvents: Event[] = [
     {
+        id: "turbulent_20251128",
+        date: "28 11 2025",
+        name: "Turbulent invite Spectre",
+        banner: [banner_20251128_1, banner_20251128_2],
+        lineUp: [
+            {
+                timeStartHour: "00",
+                timeStartMin: "00",
+                timeEndHour: "01",
+                timeEndMin: "00",
+                name: ["Ypo"]
+            },
+            {
+                timeStartHour: "01",
+                timeStartMin: "00",
+                timeEndHour: "02",
+                timeEndMin: "00",
+                name: ["Andromaque"]
+            },
+            {
+                timeStartHour: "02",
+                timeStartMin: "00",
+                timeEndHour: "03",
+                timeEndMin: "00",
+                name: ["Evajane"]
+            },
+            {
+                timeStartHour: "03",
+                timeStartMin: "00",
+                timeEndHour: "04",
+                timeEndMin: "00",
+                name: ["Zig"]
+            },
+            {
+                timeStartHour: "04",
+                timeStartMin: "00",
+                timeEndHour: "05",
+                timeEndMin: "00",
+                name: ["Parsec"]
+            },
+            {
+                timeStartHour: "00",
+                timeStartMin: "30",
+                timeEndHour: "02",
+                timeEndMin: "00",
+                name: ["One Step Further "]
+            },
+            {
+                timeStartHour: "02",
+                timeStartMin: "00",
+                timeEndHour: "03",
+                timeEndMin: "00",
+                name: ["Osmium"]
+            },
+            {
+                timeStartHour: "03",
+                timeStartMin: "00",
+                timeEndHour: "04",
+                timeEndMin: "00",
+                name: ["DSL"]
+            },
+            {
+                timeStartHour: "04",
+                timeStartMin: "00",
+                timeEndHour: "05",
+                timeEndMin: "00",
+                name: ["Tox."]
+            }
+        ]
+    },
+    {
+        id: "polychrome_20250703",
+        date: "03-06 07 2025",
+        name: "Festival Polychrome - Édition 2025",
+        banner: [banner_20250703],
+        lineUp: [
+            {
+                name: ["Biblot"]
+            },
+            {
+                name: ["Biscotek"]
+            },
+            {
+                name: ["Cruise Control"]
+            },
+            {
+                name: ["DeLL"]
+            },
+            {
+                name: ["DLP"]
+            },
+            {
+                name: ["DSL"]
+            },
+            {
+                name: ["Eriz"]
+            },
+            {
+                name: ["Ex Bordure"]
+            },
+            {
+                name: ["Excess"]
+            },
+            {
+                name: ["FMR"]
+            },
+            {
+                name: ["H"]
+            },
+            {
+                name: ["Hepeme"]
+            },
+            {
+                name: ["I.sad.or"]
+            },
+            {
+                name: ["Joystick"]
+            },
+            {
+                name: ["KZXK"]
+            },
+            {
+                name: ["LO:ST"]
+            },
+            {
+                name: ["Nomaid"]
+            },
+            {
+                name: ["One Step Further"]
+            },
+            {
+                name: ["Osmium"]
+            },
+            {
+                name: ["Postindustrialtwink"]
+            },
+            {
+                name: ["Primitive"]
+            },
+            {
+                name: ["R4"]
+            },
+            {
+                name: ["Ra.W b2b Deep Whispers"]
+            },
+            {
+                name: ["Resonance"]
+            },
+            {
+                name: ["Robot Mai"]
+            },
+            {
+                name: ["Saint Esprit"]
+            },
+            {
+                name: ["Tox."]
+            },
+            {
+                name: ["Yvette"]
+            },
+        ]
+    },
+    {
+        id: "eclosion_20250405",
+        date: "05 04 2025",
+        name: "Éclosion",
+        banner: [banner_20250504],
+        lineUp: [
+            {
+                timeStartHour: "23",
+                timeStartMin: "00",
+                timeEndHour: "00",
+                timeEndMin: "00",
+                name: ["FMR"]
+            },
+            {
+                timeStartHour: "00",
+                timeStartMin: "00",
+                timeEndHour: "01",
+                timeEndMin: "00",
+                name: ["Mononoke"]
+            },
+            {
+                timeStartHour: "01",
+                timeStartMin: "00",
+                timeEndHour: "02",
+                timeEndMin: "00",
+                name: ["DSL"]
+            },
+            {
+                timeStartHour: "02",
+                timeStartMin: "00",
+                timeEndHour: "03",
+                timeEndMin: "00",
+                name: ["Eriz"]
+            },
+            {
+                timeStartHour: "03",
+                timeStartMin: "00",
+                timeEndHour: "04",
+                timeEndMin: "00",
+                name: ["Spritz", "100S"]
+            },
+            {
+                timeStartHour: "04",
+                timeStartMin: "00",
+                timeEndHour: "05",
+                timeEndMin: "00",
+                name: ["Biscotek"]
+            },
+            {
+                timeStartHour: "05",
+                timeStartMin: "00",
+                timeEndHour: "06",
+                timeEndMin: "00",
+                name: ["I.sad.or"]
+            }
+        ]
+    },
+    {
         id: "rave_generale_20240706",
         date: "06 07 2024",
         name: "Rave générale",
-        banner: banner_20240706,
+        banner: [banner_20240706],
         lineUp: [
             {
                 timeStartHour: "23",
@@ -93,7 +316,7 @@ const pastEvents: Event[] = [
         id: "fete_de_la_musique_",
         date: "22 06 2024",
         name: "Fête de la musique",
-        banner: banner_20240622,
+        banner: [banner_20240622],
         lineUp: [
             {
                 timeStartHour: "23",
@@ -157,7 +380,7 @@ const pastEvents: Event[] = [
         id: "back_to_betise_08062024",
         date: "08 06 2024",
         name: "Back to bêtises",
-        banner: banner_20240608,
+        banner: [banner_20240608],
         lineUp: [
             {
                 timeStartHour: "22",
@@ -207,7 +430,7 @@ const pastEvents: Event[] = [
         id: "boom-boom-boom-i-want-you-in-the-woods_09092023",
         date: "09 09 2023",
         name: "Boom Boom Boom Boom I Want You In The Woods",
-        banner: banner_20230909,
+        banner: [banner_20230909],
         lineUp: [
             {
                 timeStartHour: "22",
@@ -271,7 +494,7 @@ const pastEvents: Event[] = [
         id: "vincennes-1_01072023",
         date: "01 07 2023",
         name: "Objectif Lune",
-        banner: banner_20230701,
+        banner: [banner_20230701],
         lineUp: [
             {
                 timeStartHour: "22",
@@ -335,7 +558,7 @@ const pastEvents: Event[] = [
         id: "liebe-4_10062022",
         date: "10 06 2022",
         name: "Liebe x Spectre - Once again",
-        banner: banner_20220610,
+        banner: [banner_20220610],
         lineUp: [
             {
                 timeStartHour: "20",
@@ -392,7 +615,7 @@ const pastEvents: Event[] = [
         id: "liebe-3_22042022",
         date: "22 04 2022",
         name: "Liebe x Spectre invite Ultracks Records",
-        banner: banner_20220422,
+        banner: [banner_20220422],
         lineUp: [
             {
                 timeStartHour: "20",
@@ -442,7 +665,7 @@ const pastEvents: Event[] = [
         id: "liebe-2_18032022",
         date: "18 03 2022",
         name: "Liebe x Spectre II",
-        banner: banner_20220318,
+        banner: [banner_20220318],
         lineUp: [
             {
                 timeStartHour: "19",
@@ -492,7 +715,7 @@ const pastEvents: Event[] = [
         id: "liebe-1_26112021",
         date: "26 11 2021",
         name: "Liebe x Spectre",
-        banner: banner_20211126,
+        banner: [banner_20211126],
         lineUp: [
             {
                 timeStartHour: "18",
@@ -535,7 +758,7 @@ const pastEvents: Event[] = [
         id: "45-tours-2_04112021",
         date: "04 11 2021",
         name: "Le 45 Tours x Spectre II",
-        banner: banner_20211104,
+        banner: [banner_20211104],
         lineUp: [
             {
                 timeStartHour: "19",
@@ -571,7 +794,7 @@ const pastEvents: Event[] = [
         id: "45-tours-1_01092021",
         date: "01 09 2021",
         name: "Le 45 Tours x Spectre",
-        banner: banner_20210901,
+        banner: [banner_20210901],
         lineUp: [
             {
                 timeStartHour: "18",
@@ -614,7 +837,7 @@ const pastEvents: Event[] = [
         id: "cavern-2_28072021",
         date: "28 07 2021",
         name: "Cavern x Spectre II",
-        banner: banner_20210728,
+        banner: [banner_20210728],
         lineUp: [
             {
                 timeStartHour: "18",
@@ -657,7 +880,7 @@ const pastEvents: Event[] = [
         id: "cavern-1_22072021",
         date: "22 07 2021",
         name: "Cavern x Spectre",
-        banner: banner_20210722,
+        banner: [banner_20210722],
         lineUp: [
             {
                 timeStartHour: "19",
@@ -691,19 +914,19 @@ const pastEvents: Event[] = [
     }
 ]
 
-const nextEvent: Event | undefined = {
-    id: "20241005",
-    date: "05 10 2024",
-    name: undefined,
-    banner: undefined,
-    lineUp: []
-}
+// const nextEvent: Event | undefined = {
+//     id: "20241005",
+//     date: "05 10 2024",
+//     name: undefined,
+//     banner: undefined,
+//     lineUp: []
+// }
 
 export default function EventsPage() {
     return (
         <Page title="Évènements">
             <div className="w-full h-full flex flex-col justify-start items-stretch gap-16">
-                <div className="h-full flex flex-col justify-start items-stretch gap-2 md:gap-4">
+                {/* <div className="h-full flex flex-col justify-start items-stretch gap-2 md:gap-4">
                     <h2 className="text-lg opacity-50 font-light uppercase">à venir</h2>
                     <div className="h-full px-2">
                         {
@@ -776,7 +999,7 @@ export default function EventsPage() {
                             )
                         }
                     </div>
-                </div>
+                </div> */}
                 <div className="h-full flex flex-col justify-start items-stretch gap-2 md:gap-4">
                     <h2 className="text-lg opacity-50 font-light uppercase">passés</h2>
                     <div className="h-full px-2">
@@ -792,12 +1015,21 @@ export default function EventsPage() {
                                         </AccordionTrigger>
                                         <AccordionContent>
                                             <div className="flex flex-col md:flex-row justify-between items-end md:items-start gap-2">
-                                                <img
-                                                    src={event.banner}
-                                                    alt={event.id}
-                                                    className="w-full max-w-[256px]"
-                                                    loading="lazy"
-                                                />
+                                                <div className="flex flex-col justify-start items-start gap-1">
+                                                    {
+                                                        event.banner.map((banner, index) => {
+                                                            return (
+                                                                <img
+                                                                    key={index.toString()}
+                                                                    src={banner}
+                                                                    alt={event.id}
+                                                                    className="w-full max-w-[256px]"
+                                                                    loading="lazy"
+                                                                />
+                                                            )
+                                                        })
+                                                    }
+                                                </div>
                                                 <div className="min-w-min flex flex-row justify-start items-start md:items-center">
                                                     <ol className="flex flex-col justify-start items-end gap-2">
                                                         {
@@ -819,12 +1051,18 @@ export default function EventsPage() {
                                                                             ))
                                                                         }
                                                                     </span>
-                                                                    <span>
-                                                                        <span className="font-extralight whitespace-nowrap">{time.timeStartHour}</span>
-                                                                        <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeStartMin} - </span>
-                                                                        <span className="font-extralight whitespace-nowrap">{time.timeEndHour}</span>
-                                                                        <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeEndMin}</span>
-                                                                    </span>
+                                                                    {
+                                                                        !time.timeStartHour && !time.timeEndHour && !time.timeStartMin && !time.timeEndMin
+                                                                            ? null
+                                                                            : (
+                                                                                <span>
+                                                                                    <span className="font-extralight whitespace-nowrap">{time.timeStartHour}</span>
+                                                                                    <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeStartMin} - </span>
+                                                                                    <span className="font-extralight whitespace-nowrap">{time.timeEndHour}</span>
+                                                                                    <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeEndMin}</span>
+                                                                                </span>
+                                                                            )
+                                                                    }
                                                                 </li>
                                                             ))
                                                         }

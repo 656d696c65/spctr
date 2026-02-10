@@ -23,6 +23,11 @@ const routes = [
         key: "donations",
         to: "/dons",
         label: "dons"
+    },
+    {
+        key: "festival",
+        to: "/festival",
+        label: "festival"
     }
 ] as const
 
