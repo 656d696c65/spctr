@@ -2,6 +2,7 @@ import { createRouter } from "@tanstack/react-router"
 import { contactRoute } from "./contact/contact.route"
 import { donationsRoute } from "./donations/donations.route"
 import { eventsRoute } from "./events/events.route"
+import { festivalRoute } from "./festival/festival.route"
 import { galleryRoute } from "./gallery/gallery.route"
 import { homeRoute } from "./home/home.route"
 import { donationRoute } from "./inscription/donation.route"
@@ -22,6 +23,7 @@ const routeTree = rootLayoutRoute.addChildren([
         manifestRoute,
         contactRoute,
         donationsRoute,
+        festivalRoute,
         inscriptionLayoutRoute.addChildren([
             inscriptionRoute,
             donationRoute
